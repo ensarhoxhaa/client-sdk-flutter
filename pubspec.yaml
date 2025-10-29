@@ -1,6 +1,6 @@
 name: vapi
 description: "The Vapi Flutter Client SDK with unified mobile and web support."
-version: 0.1.1
+version: 0.1.2
 homepage: https://vapi.ai/
 
 environment:
