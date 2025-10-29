@@ -288,9 +288,9 @@ class VapiMobileCall implements VapiCall {
       final messageMap = jsonDecode(jsonDecode(msg));
       if (messageMap['type'] == "speech-update") {
         if (messageMap['status'] == "started") {
-          _streamController.add(const VapiEvent("speech-start"));
+          _streamController.add(VapiEvent("speech-start", messageMap));
         } else if (messageMap['status'] == "stopped") {
-          _streamController.add(const VapiEvent("speech-end"));
+          _streamController.add(VapiEvent("speech-end", messageMap));
         }
         return;
       }
